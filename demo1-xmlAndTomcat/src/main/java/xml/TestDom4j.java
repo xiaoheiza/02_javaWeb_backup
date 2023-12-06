@@ -26,11 +26,11 @@ public class TestDom4j {
         Document document = saxReader.read(resourceAsStream);
         // 从document对象上获取配置文件中的信息
         /*
-        * Node节点
-        *   element 元素节点
-        *   attribute 属性节点
-        *   test    文本节点
-        * */
+         * Node节点
+         *   element 元素节点
+         *   attribute 属性节点
+         *   test    文本节点
+         * */
         Element rootElement = document.getRootElement();
         System.out.println(rootElement.getName());
         // 获得元素下的子元素

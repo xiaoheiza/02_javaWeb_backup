@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+1、跟标签只能有一个
+2、第一行永远都是 <?xml version="1.0" encoding="UTF-8" ?>，前面不要放任何东西
+3、xml有约束，约束用于限定xml内部能编写的内容
+    dtd 简单 上手快，约束没有schema细致
+    schema  复杂  上手满，约束要比dtd约束细致
+        1个约束的示例：在项目右击点add framework support 选中web application.里面有一个xml里面写了web的约束：xsi:schemaLocation
+                     web中加了这个约束你写的标签就固定了，也就是说不能随便起名了
+                     删除则是在file->project structure中modules把web用—去掉，然后删除web目录
+-->
+<jdbc>
+    <dev id="001">
+        <username>root</username>
+        <password>root</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/atguigu</url>
+    </dev>
+    <test id="002">
+        <username>root</username>
+        <password>root</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/atguigu</url>
+    </test>
+    <formal id="003">
+        <username>root</username>
+        <password>root</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/atguigu</url>
+    </formal>
+</jdbc>
