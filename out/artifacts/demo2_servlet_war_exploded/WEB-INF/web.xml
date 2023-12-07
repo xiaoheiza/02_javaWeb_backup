@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <!--
+        1、配置Servlet类，并起一个别名
+            servlet-class 告诉tomcat对应的要实例化的Servlet类
+            servlet-name  用于关联请求的映射路径
+    -->
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>servlet.Servlet01_UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--
+        一个servlet-name可以同时对应多个url-pattern
+        不同的servlet-name不能对应同一个url-pattern
+        一个servlet标签可以同时对应多个servlet-mapping
+        url-pattern中的特殊写法
+            1、精确匹配
+                /servlet1
+            2、模糊匹配
+                *作为通配符，*在哪里，哪里就是模糊的
+                /           匹配全部，不包含jsp文件。不包含指的是jsp文件依旧可以用对应的路径访问
+                /*          匹配全部，包含jsp文件
+                /a/*        匹配前缀，后缀模糊
+                *.action    匹配后缀，前缀模糊(不能有前面的/，因为/*表示全部资源)
+    -->
+<!--    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>servlet.Servlet02_Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+&lt;!&ndash;        <url-pattern>/s1</url-pattern>&ndash;&gt;
+&lt;!&ndash;        <url-pattern>/</url-pattern>&ndash;&gt;
+        <url-pattern>/a/*</url-pattern>
+    </servlet-mapping>-->
+<!--    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/a</url-pattern>
+        <url-pattern>/b</url-pattern>
+    </servlet-mapping>-->
+</web-app>
