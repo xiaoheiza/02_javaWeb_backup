@@ -12,6 +12,13 @@
         <module>demo1-xmlAndTomcat</module>
         <module>demo2-servlet</module>
         <module>demo3-servletConfig-servletContext</module>
+        <module>demo4-forward-redirect</module>
+        <module>demo4-forward-redirect</module>
+        <module>demo5-path</module>
+        <module>schedule-system</module>
+        <module>demo6-cookie-session</module>
+        <module>demo7-areaObject</module>
+        <module>demo8-filter-listener</module>
     </modules>
 
     <properties>
@@ -21,11 +28,6 @@
 
     <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
     <dependencies>
-        <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1</version>
-        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>

@@ -26,7 +26,9 @@ public class Servlet02_ContextAPI extends HttpServlet {
         System.out.println(path);
 
         //获得项目部署的上下文路径，项目的访问路径
-        String contextPath = servletContext.getContextPath();
+        String contextPath = servletContext.getContextPath();   // => /demo3
         System.out.println(contextPath);
+        // 从域对象中读取数据
+        servletContext.setAttribute("ka", "vaa");
     }
 }

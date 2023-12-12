@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<!--    &lt;!&ndash;配置过滤器&ndash;&gt;
+    <filter>
+        <filter-name>loggingFilter</filter-name>
+        <filter-class>filter.LoggingFilter</filter-class>
+    </filter>
+    &lt;!&ndash;配置过滤器的过滤资源规则路径&ndash;&gt;
+    <filter-mapping>
+        <filter-name>loggingFilter</filter-name>
+        &lt;!&ndash; 两个都可以写多个
+        url-pattern:根据请求的资源路径 对指定的请求进行过滤
+            /*          过滤全部资源
+            /a/*        过滤以a开头的资源
+            *.html      过滤以html为后缀的资源
+            /servlet1   精确写法
+        servlet-name: 根据请求的servlet的别名，指定servlet资源进行过滤
+        &ndash;&gt;
+        <url-pattern>/servlet1</url-pattern>
+        &lt;!&ndash;<servlet-name>servlet11</servlet-name>    &lt;!&ndash;WebServlet注解的name属性&ndash;&gt;&ndash;&gt;
+    </filter-mapping>
+
+    <filter>
+        <filter-name>lifeCycleFilter</filter-name>
+        <filter-class>filter.LifeCycleFilter</filter-class>
+        <init-param>
+            <param-name>dataTimePattern</param-name>
+            <param-value>yyyy-MM-dd HH:mm:ss</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>lifeCycleFilter</filter-name>
+        <url-pattern>/servlet1</url-pattern>
+    </filter-mapping>-->
+
+<!--    &lt;!&ndash;配置多个过滤器&ndash;&gt;
+    <filter>
+        <filter-name>filter1</filter-name>
+        <filter-class>filter.Filter1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter1</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>filter2</filter-name>
+        <filter-class>filter.Filter2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>filter3</filter-name>
+        <filter-class>filter.Filter3</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter3</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+
+
+</web-app>
